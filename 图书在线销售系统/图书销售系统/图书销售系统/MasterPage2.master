@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/website.css" type="text/css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="menu">
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal"
+                Style="font-family: 微软雅黑; font-size: medium"
+                ForeColor="#FF7F50">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Admin/管理员首页.aspx" Text="管理员首页" Value="管理员首页"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Admin/订单管理.aspx" Text="订单管理" Value="订单管理"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Admin/会员查找.aspx" Text="会员查找" Value="会员查找"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Admin/增加图书.aspx" Text="增加图书" Value="增加图书"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Admin/图书进货.aspx" Text="图书进货" Value="图书进货"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Admin/图书退货.aspx" Text="图书退货" Value="图书退货"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Admin/出账管理.aspx" Text="出账管理" Value="出账管理"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </div>
+        <div style="background-color: rgba(127, 127, 102, 0.5); padding: 10px; margin: 25px auto;">
+            <div id="container">
+                <div id="left_c">
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
+                </div>
+            </div>
+            <div style="width: 65%; margin: 25px auto;">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" &gt; ">
+                    <CurrentNodeStyle ForeColor="White" />
+                    <NodeStyle Font-Bold="True" ForeColor="#FFFFCC" />
+                    <PathSeparatorStyle Font-Bold="True" ForeColor="White" />
+                    <RootNodeStyle Font-Bold="True" ForeColor="#FF7F50" />
+                </asp:SiteMapPath>
+            </div>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

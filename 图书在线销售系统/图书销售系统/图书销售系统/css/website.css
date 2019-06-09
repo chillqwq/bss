@@ -1,0 +1,52 @@
+﻿body {
+    background: url(../image/logo_bg.jpg) center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#head {
+    width: 1000px;
+    height: 128px;
+    background-color: #D3D7E2;
+}
+#head_search {
+
+    width: 845px;
+    height: 128px;
+    text-align: center;
+}
+#menu {
+    width: 500px;
+    height: 30px;
+    text-align: center;
+    background-color:#ffffcc;
+    margin: 0 auto;
+    font-size: 120%;
+}
+
+#container {
+    width: 65%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "微软雅黑",MicrosoftYaHei;
+    font-size: 17px;
+    color: white;
+}
+#left_c {
+    width: 65%;
+    height: auto;
+    text-align: left;
+    margin: 25px 0px;
+}
+
+.content {
+    width: 80%;
+    min-height: 1000px;
+    margin: 0 auto;
+    background-image: url(../image/pattern.jpg);
+    background-size: 25%;
+    background-repeat: repeat;
+    border-top: solid #ffed00 5px;
+    box-shadow: #7f7f7f 10px 10px;
+}

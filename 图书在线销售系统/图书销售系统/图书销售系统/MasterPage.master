@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/website.css" type="text/css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="menu">
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal"
+                OnMenuItemClick="Menu1_MenuItemClick" ForeColor="#FF7F50">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/首页.aspx" Text="首页" Value="首页"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/我的订单.aspx" Text="我的订单" Value="我的订单"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/我的信息.aspx" Text="我的信息" Value="我的信息"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/会员充值.aspx" Text="账户充值" Value="账户充值"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/login.aspx" Text="重新登录" Value="重新登录"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Admin/管理员首页.aspx" Text="后台管理" Value="后台管理"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+            <br />
+        </div>
+        <div style="background-color: rgba(127, 127, 102, 0.5); padding: 10px; margin: 25px auto;">
+            <div id="container">
+                <div id="left_c">
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
+                </div>
+                <br>
+                <table width="550px" align="center">
+                    <tr>
+                        <td width="80%" align="top">
+                            <asp:TextBox ID="txtSearch" runat="server" Width="1000px" CssClass="style2"
+                                BorderStyle="None" Height="40px" Font-Size="Large"></asp:TextBox>
+                        </td>
+                        <td width="20%" align="top">
+                            <asp:Button ID="btnSearch" runat="server" Text="搜索" Width="100px" Height="40px"
+                                CssClass="style2" OnClick="btnSearch_Click" BackColor="#FFFFCC"
+                                BorderStyle="None" ForeColor="#FF7F50" Font-Size="Large" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+            </div>
+            <div style="width: 65%; margin: 25px auto;">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" &gt; ">
+                    <CurrentNodeStyle ForeColor="White" />
+                    <NodeStyle Font-Bold="True" ForeColor="#FFFFCC" />
+                    <PathSeparatorStyle Font-Bold="True" ForeColor="White" />
+                    <RootNodeStyle Font-Bold="True" ForeColor="#FF7F50" />
+                </asp:SiteMapPath>
+            </div>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
